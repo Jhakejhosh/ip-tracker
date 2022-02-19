@@ -1,0 +1,171 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+:root {
+  --bg-color: white;
+  --sec-color: #808080;
+  --pri-color: black;
+}
+body {
+  background-image: url("./images/abstract.jpg");
+  background-size: cover;
+  position: relative;
+  background-repeat: no-repeat;
+  background-position: center;
+  max-width: 100%;
+  height: 100%;
+}
+button {
+  cursor: pointer;
+  border: none;
+  outline: none;
+  background-color: transparent;
+}
+header {
+  background-color: var(--bg-color);
+  max-width: 100%;
+  position: relative;
+  margin: 2rem 3rem 0 3rem;
+  border-radius: 5px;
+  z-index: 1;
+  padding: 2rem 3rem;
+}
+.header1 {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem;
+  width: 100%;
+}
+.header1 p {
+  color: var(--sec-color);
+}
+.alert {
+  border: 1px solid red;
+  padding: 0.3rem;
+  margin-left: 1rem;
+  font-weight: bold;
+  color: red;
+  border-radius: 5px;
+  animation-name: alert-scale;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+}
+@keyframes alert-scale {
+  0%, 100% {
+    transform: scale(0.9);
+  }
+  50% {
+    transform: scale(1);
+  }
+}
+.header2 {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+  width: 100%;
+}
+.header2 h1 {
+  font-weight: normal;
+  font-size: 50px;
+}
+.header2 button {
+  background-color: #006eff;
+  color: var(--bg-color);
+  padding: 0.8rem 1.2rem;
+  border-radius: 5px;
+}
+.header3 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 3rem;
+  padding-bottom: 2rem;
+  border-bottom: 2px solid rgba(213, 213, 213, 0.7);
+}
+.icon {
+  color: var(--sec-color);
+}
+.effect p {
+  margin-left: 0.3rem;
+  font-size: 20px;
+}
+.effect {
+  display: flex;
+  align-items: center;
+  margin-top: 1rem;
+}
+.left h4, .right h4, .subs h4 {
+  color: var(--sec-color);
+  font-weight: lighter;
+}
+.header4 h3 {
+  margin-bottom: 2rem;
+}
+.sub-header {
+  display: grid;
+  grid-template-columns: repeat(3 , 3fr);
+  grid-gap: 3rem;
+}
+.subs p {
+  font-size: 18px;
+}
+.map {
+  max-width: 100%;
+  height: 100vh;
+  margin-top: -50px;
+  z-index: -1;
+}
+
+
+
+
+
+
+
+@media screen and (max-width:768px) {
+  body {
+    width: 100%;
+    position: relative;
+    height: 100vh;
+    overflow-x: hidden;
+  }
+  header {
+    width: 100%;
+    padding: 0.8rem;
+    margin: 0;
+    position: relative;
+  }
+  .header2 {
+    display: block;
+    width: 100%;
+    margin-bottom: 1.5rem;
+  }
+  .header2 button {
+    margin-top: 1rem;
+  }
+  .header2 h1 {
+    font-size: 45px;
+  }
+  .header4 {
+    margin-bottom: 2rem;
+  }
+  .header4 h3 {
+    margin-bottom: 2rem;
+    text-align: center;
+  }
+  .sub-header {
+    display: grid;
+    grid-template-columns: repeat(2 , 3fr);
+    grid-gap: 3rem;
+  }
+  .subs p {
+    font-size: 18px;
+  }
+  .map {
+    width: 100%;
+    height: 50vh;
+  }
+}
